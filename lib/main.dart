@@ -1,5 +1,6 @@
 import 'package:auth_page_flutter/widgets/auth/auth_widget.dart';
 import 'package:auth_page_flutter/widgets/auth/foget_pass_widget.dart';
+import 'package:auth_page_flutter/widgets/auth/verify_code_widget.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -19,6 +20,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/auth': ((context) => const AuthWidget()),
         '/foget_pass':(context) =>const FogetPassWidget(),
+        '/verify_code':((context) => const VerifyWidget()),
       },
       initialRoute: '/auth',
     );
