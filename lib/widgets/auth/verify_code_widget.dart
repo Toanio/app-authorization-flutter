@@ -17,9 +17,7 @@ class _VerifyWidgetState extends State<VerifyWidget> {
           _BackButton(),
           _VerifyCodeText(),
           Center(child: _EditCode()),
-         
-
-
+          _ResendCodeText(),
         ],
       ) ,
     );
@@ -145,5 +143,39 @@ class __EditCodeState extends State<_EditCode> {
           ),
         ),
       );
+  }
+}
+
+class _ResendCodeText extends StatelessWidget {
+  const _ResendCodeText({ Key? key }) : super(key: key);
+  @override
+  Widget build(BuildContext context) {
+    const textStyle1 = TextStyle(
+      fontSize: 14, 
+      fontWeight: FontWeight.w400,
+      color: Color(0xFF1D68FF),
+      fontFamily: 'Poppins',
+    );
+    const textStyle2 = TextStyle(
+      fontSize: 15, 
+      fontWeight: FontWeight.w600,
+      color: Color(0xFF1D68FF),
+      fontFamily: 'Poppins',
+    );
+    return Padding(
+      padding: const EdgeInsets.only(top: 34, left: 45),
+      child: RichText(
+        text: const TextSpan(
+          text: 'Didn’t Receive a code? ',
+          style: textStyle1,
+          children: <TextSpan>[
+            TextSpan(
+              text: 'Resend code',
+              style: textStyle2,
+            )
+          ]
+        )
+      ),
+    );
   }
 }
