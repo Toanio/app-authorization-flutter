@@ -154,6 +154,7 @@ class __EmailTextFieldState extends State<_EmailTextField> {
     final bool isValid = EmailValidator.validate(email);
     if(isValid) {
       borderColor = const Color(0xFF18DAA3);
+      Navigator.of(context).pushNamed('/verify_code');
     }else {
       borderColor = Colors.red;
     }
