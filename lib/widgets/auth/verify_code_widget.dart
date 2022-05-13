@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:auth_page_flutter/widgets/buttons/back_button.dart';
 
 class VerifyWidget extends StatefulWidget {
   const VerifyWidget({ Key? key }) : super(key: key);
